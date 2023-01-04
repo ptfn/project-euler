@@ -27,6 +27,6 @@ int main()
     arr[1][0] = 1;
     arr[0][1] = 1;
     
-    printf("%ld\n", route(20, 20));
+    printf("%ld\n", route(N, M));
     return 0;
 }

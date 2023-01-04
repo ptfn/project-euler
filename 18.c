@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdint.h>
 
+#define MAX(a, b) (a > b ? a : b)
 #define N 15
 #define M 15
-#define MAX(a, b) (a > b ? a : b)
 
 uint16_t result = 75;
 uint8_t triagle[N][M] = {{75},
@@ -22,21 +22,21 @@ uint8_t triagle[N][M] = {{75},
                          {63, 66,  4, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31},
                          { 4, 62, 98, 27, 23,  9, 70, 98, 73, 93, 38, 53, 60,  4, 23}};
 
-void search2(uint8_t i, uint8_t j)
+void search(uint8_t i, uint8_t j)
 {
     if (i < N && j < N) {
         uint8_t max = MAX(triagle[i+1][j], triagle[i+1][j+1]);
         result += max;
         if (triagle[i+1][j] == max)
-            search2(i+1, j);
+            search(i+1, j);
         else
-            search2(i+1, j+1);
+            search(i+1, j+1);
     }
 }
 
 int main()
 {
-    search2(0, 0);
+    search(0, 0);
     printf("%d\n", result);
 
     return 0;
