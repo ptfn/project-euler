@@ -22,5 +22,7 @@ My solutions to problems from the Euler Project in the C programming language. T
 * Problem 19 - Counting Sundays
 * Problem 20 - Factorial digit sum
 * Problem 21 - Amicable numbers
+* :x: *Problem 22 - Names scores*
+* Problem 23 - Non-abundant sums
 
 
