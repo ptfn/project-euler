@@ -24,5 +24,5 @@ My solutions to problems from the Euler Project in the C programming language. T
 * Problem 21 - Amicable numbers
 * :x: *Problem 22 - Names scores*
 * Problem 23 - Non-abundant sums
-
-
+* Problem 24 - Lexicographic permutations
+* Problem 25 - 1000-digit Fibonacci number
