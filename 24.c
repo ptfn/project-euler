@@ -1,9 +1,12 @@
+#include <string.h>
 #include <stdint.h>
 #include <stdio.h>
 
 #define N 1000000
 #define LENGTH 10
 char result[LENGTH];
+char arr[LENGTH] = {'0', '1', '2', '3', '4',
+                    '5', '6', '7', '8', '9'};
 
 uint64_t fact(uint8_t number)
 {
@@ -22,8 +25,9 @@ void del_item(char arr[], uint8_t size, uint8_t index)
 int main()
 {
     for (uint32_t i = 1; i < N; i++) {
-        char copy[LENGTH] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
-        for (uint8_t j = 10; j > 0; j--) {
+        char copy[LENGTH];
+        strcpy(copy, arr);
+        for (uint8_t j = LENGTH; j > 0; j--) {
             uint8_t index = i / fact(j-1) % j;
             result[j] = copy[index];
             del_item(copy, LENGTH, index);
@@ -31,7 +35,7 @@ int main()
     }
     
     for (uint8_t i = LENGTH; i > 0; i--)
-        printf("%c", result[i]);
+        putchar(result[i]);
     putchar('\n');
     return 0;
 }
