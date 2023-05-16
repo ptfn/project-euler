@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 #define LEAP(y) (y % 4 == 0 && y % 100 != 0 || y % 400 == 0 ? true : false) 
-#define FROM 1901
-#define TO   2000
+#define FROM    1901
+#define TO      2000
 
 uint8_t MONTH[] = {31, 28, 31, 30,
                    31, 30, 31, 31,

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 
-#define N 100
+#define N 500
 
 uint32_t divider(uint64_t number)
 {

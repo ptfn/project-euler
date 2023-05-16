@@ -17,7 +17,7 @@ int main()
     for (uint16_t i = 1; i < N; i++)
         if (i == sum_div((t = sum_div(i))) && i != t)
             result += i;
-            
+
     printf("%d\n", result);
     return 0;
 }

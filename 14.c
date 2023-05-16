@@ -1,6 +1,6 @@
 #include <stdint.h>
 #include <stdio.h>
-#define N 100000000
+#define N 1000000
 
 struct collatz_number {
     uint64_t max;

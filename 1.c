@@ -1,13 +1,15 @@
 #include <stdio.h>
+#define N 1000
 
 int main()
 {
-    int n, sum = 0;
-    scanf("%d", &n);
+    int sum = 0;
 
-    for (int i = 1; i < n; i++)
-        if (i % 3 == 0 || i % 5 == 0)
+    for (int i = 1; i < N; i++) {
+        if (i % 3 == 0 || i % 5 == 0) {
             sum += i;
+        }
+    }
 
     printf("%d\n", sum);
 }

@@ -19,7 +19,7 @@ int main()
         mpz_add(sum, sum, count);
         mpz_clear(count);
     }
-    
+
     int len = mpz_sizeinbase(sum, 10);
 
     for (int i = len, j = len; i > 41; i--, j--) {
