@@ -1,9 +1,9 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#define N 100
+#define N 4000000
 
-void next_fib(uint64_t *a, uint64_t *b)
+void next_fib(uint64_t* a, uint64_t* b)
 {
     uint64_t temp = *a + *b;
     *a = *b;
@@ -12,14 +12,11 @@ void next_fib(uint64_t *a, uint64_t *b)
 
 int main()
 {
-    uint64_t i = 0 ,sum = 0, a = 1, b = 2;
-
-    for (i; i < N; i++, next_fib(&a, &b))
-        if (b % 2 == 0) {
+    uint64_t sum = 0, a = 0, b = 1;
+    while (b <= N) {
+        if (b % 2 == 0)
             sum += b;
-            if (sum > 4000000) 
-                break;
-        }
-
-    printf("%ld\n", b);
+        next_fib(&a, &b);
+    }
+    printf("\n%ld\n", sum);
 }
